@@ -14,8 +14,54 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;  
+          }
+          
+           botaoExcluir{
+              margin-right: 50%;
+          }
+              
+           input[type="submit"] {
+              background-color: #0a661b; 
+              color: white; 
+              border: none; 
+              padding: 15px 32px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 8px;
+              transition: background-color 0.3s ease;
+         }
 
-    <h1>Excluir Estado</h1>
+            input[type="submit"]:hover {
+                background-color: #f80018; 
+            }
+
+            input[type="submit"]:active {
+                background-color: #f80018;
+            }
+
+            input[type="submit"]:focus {
+                outline: none;
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+            }
+
+              .volta{
+                  margin-right: 50px;
+                  color: black;
+              }
+          
+      </style>
+      
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Excluir Estado</h1>
 
     <form method="post" action="${cp}/processaEstados">
 
@@ -24,20 +70,20 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>${requestScope.estado.nome}</td>
+          <td class="campos" style="color: #000">Nome:</td>
+          <td style="color: #000">${requestScope.estado.nome}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sigla:</td>
-          <td>${requestScope.estado.sigla}</td>
+          <td class="campos" style="color: #000">Sigla:</td>
+          <td style="color: #000">${requestScope.estado.sigla}</td>
         </tr>
         <tr>
           <td>
-            <a href="${cp}/formularios/estados/listagem.jsp">
-              Voltar
-            </a>
+              <div class="volta">
+                   <a href="${cp}/formularios/estados/listagem.jsp"> Voltar ao Inicio</a>
+              </div>
           </td>
-          <td class="alinharDireita">
+          <td class="botaoExcluir">
             <input type="submit" value="Excluir"/>
           </td>
         </tr>

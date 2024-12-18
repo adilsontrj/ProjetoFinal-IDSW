@@ -14,8 +14,54 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              color: #000;
+              justify-content:  flex-end;
+          }
 
-    <h1>Novo Estado</h1>
+          .botao{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;   
+          }
+          
+          input[type="submit"] {
+            background-color: #0a661b;
+            color: white; 
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000; 
+        }
+
+        input[type="submit"]:active {
+            background-color: #000;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+        }
+        
+        .voltar{
+            color: #000;
+            margin-left: 10%
+        } 
+      </style>
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Novo Estado</h1>
 
     <form method="post" action="${cp}/processaEstados">
 
@@ -23,7 +69,7 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
+          <td class="campos">Nome:</td>
           <td>
             <input name="nome"
                    type="text"
@@ -33,7 +79,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sigla:</td>
+          <td class="campos">Sigla:</td>
           <td>
             <input name="sigla"
                    type="text"
@@ -44,11 +90,11 @@
         </tr>
         <tr>
           <td>
-            <a href="${cp}/formularios/estados/listagem.jsp">
-              Voltar
-            </a>
+              <div class="voltar">
+                  <a href="${cp}/formularios/estados/listagem.jsp">Voltar para o Inicio</a>
+               </div> 
           </td>
-          <td class="alinharDireita">
+          <td class="botao">
             <input type="submit" value="Salvar"/>
           </td>
         </tr>
