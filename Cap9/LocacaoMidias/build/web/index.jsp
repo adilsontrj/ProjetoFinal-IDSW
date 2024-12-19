@@ -10,7 +10,7 @@
     <title>Locadora Arthur Chiodi</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="icon" href="" type=" image/x-icon">
   </head>
 
   <body>
@@ -40,8 +40,8 @@
       <p>Os filmes em nossa coleção são avaliados por usuários do mundo inteiro!</p>
 
       <div class="image-container">
-        <img class="active" src="img/img.JPG" alt="Imagem 1">
-        <img src="img/img2.jpg" alt="Imagem 2">
+        <img class="active" src="img/img2.jpg" alt="Imagem 1">
+        <img src="img/big hero.jpg" alt="Imagem 2">
         <img src="img/img3.jpg" alt="Imagem 3">
         <img src="img/img4.jpg" alt="Imagem 4">
         <img src="img/img5.jpg" alt="Imagem 5">
