@@ -13,10 +13,7 @@ import locacaomidias.dao.ClassificacaoInternaDAO;
 import locacaomidias.entidades.ClassificacaoInterna;
 import locacaomidias.utils.Utils;
 
-/**
- *
- * @author fecre
- */
+
 @WebServlet(name = "ClassificacoesInternasServlet", urlPatterns = {"/processaClassificacaoesInternas"})
 public class ClassificacoesInternasServlet extends HttpServlet {
 

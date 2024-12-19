@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Size;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class Genero {
     

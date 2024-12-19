@@ -10,7 +10,7 @@ import locacaomidias.utils.Utils;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class GeneroDAO extends DAO<Genero> {
     

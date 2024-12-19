@@ -8,10 +8,7 @@ import java.util.List;
 import locacaomidias.utils.Utils;
 import locacaomidias.entidades.ClassificacaoInterna;
 
-/**
- *
- * @author fecre
- */
+
 public class ClassificacaoInternaDAO extends DAO<ClassificacaoInterna> {
     
     public ClassificacaoInternaDAO() throws SQLException {

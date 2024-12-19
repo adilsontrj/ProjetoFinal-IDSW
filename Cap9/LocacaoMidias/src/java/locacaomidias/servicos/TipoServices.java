@@ -8,7 +8,7 @@ import locacaomidias.entidades.Tipo;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class TipoServices {
     public List<Tipo> getTodos() {

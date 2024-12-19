@@ -22,10 +22,7 @@ import locacaomidias.entidades.Tipo;
 import locacaomidias.entidades.ClassificacaoInterna;
 import locacaomidias.utils.Utils;
 
-/**
- *
- * @author fecre
- */
+
 @WebServlet(name = "MidiasServlet", urlPatterns = {"/processaMidias"})
 public class MidiasServlet extends HttpServlet {
 

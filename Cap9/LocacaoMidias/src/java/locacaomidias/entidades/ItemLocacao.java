@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class ItemLocacao {
     

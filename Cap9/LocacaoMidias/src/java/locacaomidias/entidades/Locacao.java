@@ -2,7 +2,10 @@ package locacaomidias.entidades;
 
 import java.sql.Date;
 import jakarta.validation.constraints.NotNull;
-
+/**
+ *
+ * @author adils
+ */
 public class Locacao {
     
     @NotNull

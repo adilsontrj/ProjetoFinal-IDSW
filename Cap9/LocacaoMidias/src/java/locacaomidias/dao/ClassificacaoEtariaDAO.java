@@ -8,10 +8,7 @@ import java.util.List;
 import locacaomidias.entidades.ClassificacaoEtaria;
 import locacaomidias.utils.Utils;
 
-/**
- *
- * @author fecre
- */
+
 public class ClassificacaoEtariaDAO extends DAO<ClassificacaoEtaria> {
     
     public ClassificacaoEtariaDAO() throws SQLException {

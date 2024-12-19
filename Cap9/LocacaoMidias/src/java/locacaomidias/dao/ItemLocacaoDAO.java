@@ -8,9 +8,10 @@ import java.util.List;
 import locacaomidias.entidades.Exemplar;
 import locacaomidias.entidades.ItemLocacao;
 
+
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class ItemLocacaoDAO extends DAO<ItemLocacao> {
     

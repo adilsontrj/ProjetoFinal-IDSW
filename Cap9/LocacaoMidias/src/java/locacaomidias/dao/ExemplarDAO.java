@@ -16,7 +16,7 @@ import locacaomidias.utils.Utils;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class ExemplarDAO extends DAO<Exemplar> {
     

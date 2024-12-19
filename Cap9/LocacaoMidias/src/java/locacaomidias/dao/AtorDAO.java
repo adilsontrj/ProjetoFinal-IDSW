@@ -10,8 +10,9 @@ import locacaomidias.entidades.Ator;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
+
 public class AtorDAO extends DAO<Ator>{
     
     public AtorDAO() throws SQLException {

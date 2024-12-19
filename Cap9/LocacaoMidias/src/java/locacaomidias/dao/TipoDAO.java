@@ -10,8 +10,9 @@ import locacaomidias.utils.Utils;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
+
 public class TipoDAO extends DAO<Tipo>{
     
     public TipoDAO() throws SQLException {

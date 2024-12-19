@@ -15,7 +15,7 @@ import locacaomidias.utils.Utils;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class MidiaDAO extends DAO<Midia>{
     

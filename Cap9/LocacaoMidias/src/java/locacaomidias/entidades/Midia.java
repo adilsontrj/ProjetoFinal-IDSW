@@ -3,10 +3,9 @@ package locacaomidias.entidades;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class Midia {
     

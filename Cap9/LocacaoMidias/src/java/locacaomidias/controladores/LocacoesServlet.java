@@ -17,10 +17,7 @@ import locacaomidias.entidades.Cliente;
 import locacaomidias.entidades.Locacao;
 import locacaomidias.utils.Utils;
 
-/**
- *
- * @author fecre
- */
+
 @WebServlet(name = "LocacaoServlet", urlPatterns = {"/processaLocacoes"})
 public class LocacoesServlet extends HttpServlet {
 

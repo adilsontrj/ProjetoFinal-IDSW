@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class Exemplar {
     

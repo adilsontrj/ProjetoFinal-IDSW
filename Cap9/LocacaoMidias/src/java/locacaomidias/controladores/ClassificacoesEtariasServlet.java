@@ -12,10 +12,8 @@ import locacaomidias.dao.ClassificacaoEtariaDAO;
 import locacaomidias.entidades.ClassificacaoEtaria;
 import locacaomidias.utils.Utils;
 
-/**
- *
- * @author fecre
- */
+
+
 @WebServlet(name = "ClassificacoesEtariasServlet", urlPatterns = {"/processaClassificacoesEtarias"})
 public class ClassificacoesEtariasServlet extends HttpServlet {
 

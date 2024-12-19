@@ -8,7 +8,7 @@ import locacaomidias.entidades.Genero;
 
 /**
  *
- * @author fecre
+ * @author adils
  */
 public class GeneroServices {
     public List<Genero> getTodos() {
