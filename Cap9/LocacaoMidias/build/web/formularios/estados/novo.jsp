@@ -91,7 +91,7 @@
         <tr>
           <td>
               <div class="voltar">
-                  <a href="${cp}/formularios/estados/listagem.jsp">Voltar para o Inicio</a>
+                  <a href="${cp}/formularios/estados/listagem.jsp">Voltar</a>
                </div> 
           </td>
           <td class="botao">

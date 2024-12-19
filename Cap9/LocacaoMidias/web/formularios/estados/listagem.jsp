@@ -99,7 +99,7 @@
             </p>
                 
                 
-            <p><a href="${cp}/index.jsp">Voltar para o Inicio</a></p>
+            <p><a href="${cp}/index.jsp">Voltar</a></p>
         </div>
   </body>
 
