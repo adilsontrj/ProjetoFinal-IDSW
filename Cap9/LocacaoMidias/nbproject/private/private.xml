@@ -9,9 +9,13 @@
         </group>
         <group>
             <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/index.jsp</file>
+            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/src/java/locacaomidias/controladores/ClientesServlet.java</file>
+            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/formularios/cidades/novo.jsp</file>
+            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/src/java/locacaomidias/servicos/ClienteServices.java</file>
+            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/formularios/classificacoesEtarias/novo.jsp</file>
             <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/src/java/locacaomidias/jdbc/TestConnection.java</file>
             <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/css/estilos.css</file>
-            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/img/img2.jpg</file>
+            <file>file:/C:/Users/adils/OneDrive/Documentos/GitHub/ProjetoFinal-IDSW/Cap9/LocacaoMidias/web/formularios/cidades/listagem.jsp</file>
         </group>
     </open-files>
 </project-private>

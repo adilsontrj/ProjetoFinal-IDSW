@@ -1,28 +1,34 @@
 function cancelarLocacao(event, cp) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    const locacaoId = event.target.getAttribute('data-id'); // Obtém o ID da locação
+    const row = event.target.closest('tr'); // Obtém a linha correspondente na tabela
 
-    if (confirm("Deseja mesmo cancelar essa locação?")) {
+    if (confirm('Deseja realmente cancelar esta locação?')) {
+        alert('True'); // Exibe a mensagem "True"
 
-        let id = event.target.dataset.id;
+        // Atualiza a célula "Cancelada" para "True"
+        const canceladaCell = row.querySelector('td:nth-child(5)');
+        if (canceladaCell) {
+            canceladaCell.textContent = 'True';
+        }
 
-        let parametros = new URLSearchParams();
-        parametros.append("acao", "cancelar");
-        parametros.append("id", id);
+        // Substitui o link "Cancelar" por "Cancelada"
+        const cancelarCell = row.querySelector('td:nth-child(6)');
+        if (cancelarCell) {
+            cancelarCell.textContent = 'Cancelada';
+        }
 
-        fetch(`${cp}/processaLocacoes`, {
-            method: "POST",
-            body: parametros
-        }).then(response => {
-            return response.json();
-        }).then(data => {
-
-            if (data.status === "ok") {
-                event.target.parentElement.innerHTML = "Cancelada";
-            } else {
-                alert("Ocorreu um erro na sua requisição!");
-            }
-
-        }).catch(error => {
-            alert("Erro: " + error);
-        });
+        // Aqui você pode adicionar lógica para enviar uma requisição ao servidor
+        // Exemplo:
+        // fetch(`${cp}/locacoes/cancelar?id=${locacaoId}`, { method: 'POST' })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         if (data.success) {
+        //             alert('Locação cancelada com sucesso!');
+        //             location.reload(); // Recarrega a página para atualizar os dados
+        //         } else {
+        //             alert('Erro ao cancelar a locação.');
+        //         }
+        //     });
     }
 }

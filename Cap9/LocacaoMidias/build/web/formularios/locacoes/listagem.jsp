@@ -12,6 +12,9 @@
               content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
               href="${cp}/css/estilos.css"/>
+        <script src="${cp}/js/formularios/locacoes/listagem.js"></script>
+
+        
     </head>
 
     <body>

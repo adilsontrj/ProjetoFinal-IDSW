@@ -98,15 +98,16 @@
           </td>
         </tr>
         <tr>
-          <td>
-              <div class="voltar"
-                    <a href="${cp}/formularios/cidades/listagem.jsp">Voltar</a>
-              </div>
-          </td>
-          <td class="botao">
-            <input type="submit" value="Salvar"/>
-          </td>
-        </tr>
+  <td>
+    <div class="voltar">
+      <a href="${cp}/formularios/cidades/listagem.jsp">Voltar</a>
+    </div>
+  </td>
+  <td class="botao">
+    <input type="submit" value="Salvar"/>
+  </td>
+</tr>
+
       </table>
 
     </form>
