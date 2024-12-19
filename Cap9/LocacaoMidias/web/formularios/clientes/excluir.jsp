@@ -15,8 +15,53 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;  
+          }
+          
+           botaoExcluir{
+              margin-right: 50%;
+          }
+              
+           input[type="submit"] {
+              background-color: #0a661b; 
+              color: white; 
+              border: none; 
+              padding: 15px 32px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 8px;
+              transition: background-color 0.3s ease;
+         }
 
-    <h1>Excluir Cliente</h1>
+            input[type="submit"]:hover {
+                background-color: #f80018; 
+            }
+
+            input[type="submit"]:active {
+                background-color: #f80018;
+            }
+
+            input[type="submit"]:focus {
+                outline: none;
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+            }
+
+              .volta{
+                  margin-right: 50px;
+                  color: black;
+              }
+          
+      </style>
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Excluir Cliente</h1>
 
     <form method="post" action="${cp}/processaClientes">
 
@@ -25,56 +70,56 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>${requestScope.cliente.nome}</td>
+          <td class="campos" style="color: #000">Nome:</td>
+          <td style="color: #000">${requestScope.cliente.nome}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sobrenome:</td>
-          <td>${requestScope.cliente.sobrenome}</td>
+          <td class="campos" style="color: #000">Sobrenome:</td>
+          <td style="color: #000">${requestScope.cliente.sobrenome}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Data de Nascimento:</td>
-          <td>
+          <td class="campos" style="color: #000">Data de Nascimento:</td>
+          <td style="color: #000">
             <fmt:formatDate 
                 pattern="dd/MM/yyyy"
                 value="${requestScope.cliente.dataNascimento}"/>
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">CPF:</td>
-          <td>${requestScope.cliente.cpf}</td>
+          <td class="campos" style="color: #000">CPF:</td>
+          <td style="color: #000">${requestScope.cliente.cpf}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">E-mail:</td>
-          <td>${requestScope.cliente.email}</td>
+          <td class="campos" style="color: #000">E-mail:</td>
+          <td style="color: #000">${requestScope.cliente.email}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Logradouro:</td>
-          <td>${requestScope.cliente.logradouro}</td>
+          <td class="campos" style="color: #000">Logradouro:</td>
+          <td style="color: #000">${requestScope.cliente.logradouro}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Número:</td>
-          <td>${requestScope.cliente.numero}</td>
+          <td class="campos" style="color: #000">Número:</td>
+          <td style="color: #000">${requestScope.cliente.numero}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Bairro:</td>
-          <td>${requestScope.cliente.bairro}</td>
+          <td class="campos" style="color: #000">Bairro:</td>
+          <td style="color: #000">${requestScope.cliente.bairro}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">CEP:</td>
-          <td>${requestScope.cliente.cep}</td>
+          <td class="campos" style="color: #000">CEP:</td>
+          <td style="color: #000">${requestScope.cliente.cep}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Cidade:</td>
-          <td>${requestScope.cliente.cidade.nome}</td>
+          <td class="campos" style="color: #000">Cidade:</td>
+          <td style="color: #000">${requestScope.cliente.cidade.nome}</td>
         </tr>
         <tr>
           <td>
-            <a href="${cp}/formularios/clientes/listagem.jsp">
-              Voltar
-            </a>
+              <div class="volta">
+                <a href="${cp}/formularios/clientes/listagem.jsp">Voltar</a>
+              </div>
           </td>
-          <td class="alinharDireita">
+          <td class="botaoExcluir">
             <input type="submit" value="Excluir"/>
           </td>
         </tr>

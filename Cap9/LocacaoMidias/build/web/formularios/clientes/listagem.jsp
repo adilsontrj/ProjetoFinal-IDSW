@@ -6,7 +6,7 @@
 
 <html>
   <head>
-    <title>Clientes Cadastrados</title>
+    <title>Lista de Clientes</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,46 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .botoes{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 21%;
+              gap: 15%;
+              margin-top: 10%;
+          }
+          
+           .botoes a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #0a661b ;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-    <h1>Clientes Cadastrados</h1>
+        .botoes a:hover {
+            background-color: #000; 
+            transform: scale(1.1);
+        }
+        
+        a{
+            color: black;
+        }
+        
+        tbody{
+            margin-left: 5px;
+        }
+      </style>
 
-    <p>
-      <a href="${cp}/formularios/clientes/novo.jsp">
-        Novo Cliente
-      </a>
-    </p>
-
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Clientes Cadastrados</h1>
+    
     <table class="tabelaListagem">
       <thead>
         <tr>
@@ -46,12 +77,12 @@
 
         <c:forEach items="${servicos.todos}" var="cliente">
           <tr>
-            <td>${cliente.id}</td>
-            <td>${cliente.nome}</td>
-            <td>${cliente.sobrenome}</td>
-            <td>${cliente.email}</td>
-            <td>${cliente.cpf}</td>
-            <td>${cliente.cidade.nome}</td>
+            <td style="color: #000">${cliente.id}</td>
+            <td style="color: #000">${cliente.nome}</td>
+            <td style="color: #000">${cliente.sobrenome}</td>
+            <td style="color: #000">${cliente.email}</td>
+            <td style="color: #000">${cliente.cpf}</td>
+            <td style="color: #000">${cliente.cidade.nome}</td>
             <td>
               <a href="${cp}/${prefixo}Alteracao&id=${cliente.id}">
                 Alterar
@@ -67,8 +98,16 @@
       </tbody>
 
     </table>
+        <div class="botoes">
+            <p>
+                <a href="${cp}/formularios/clientes/novo.jsp">Cadastrar Cliente</a>
+            </p>
+             <p>
+                 <a href="${cp}/index.jsp">Voltar</a>
+             </p>
+        </div>
 
-    <p><a href="${cp}/index.jsp">Tela Principal</a></p>
+   
 
   </body>
 

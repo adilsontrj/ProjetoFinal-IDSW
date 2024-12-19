@@ -6,7 +6,7 @@
 
 <html>
   <head>
-    <title>Classificação Interna Cadastradas</title>
+    <title>Classificações Internas</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,47 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .botoes{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 21%;
+              gap: 15%;
+              margin-top: 10%;
+          }
+          
+           .botoes a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #0a661b ;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-    <h1>Classificação Interna Cadastradas</h1>
+        .botoes a:hover {
+            background-color: #000; 
+            transform: scale(1.1);
+        }
+        
+        a{
+            color: black;
+        }
+        
+        tbody{
+            margin-left: 5px;
+        }
+      </style>
 
-    <p>
-      <a href="${cp}/formularios/classificacoesInternas/novo.jsp">
-        Nova Classificação Interna
-      </a>
-    </p>
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Classificações Internas Cadastradas</h1>
 
+    
     <table class="tabelaListagem">
       <thead>
         <tr>
@@ -43,9 +75,9 @@
 
         <c:forEach items="${servicos.todos}" var="classificacaoInterna">
           <tr>
-            <td>${classificacaoInterna.id}</td>
-            <td>${classificacaoInterna.descricao}</td>
-            <td>${classificacaoInterna.valorAluguel}</td>
+            <td style="color: #000">${classificacaoInterna.id}</td>
+            <td style="color: #000">${classificacaoInterna.descricao}</td>
+            <td style="color: #000">${classificacaoInterna.valorAluguel}</td>
             <td>
               <a href="${cp}/${prefixo}Alteracao&id=${classificacaoInterna.id}">
                 Alterar
@@ -61,9 +93,14 @@
       </tbody>
       
     </table>
-
-    <p><a href="${cp}/index.jsp">Tela Principal</a></p>
-
+        <div class="botoes"
+            <p>
+                <a href="${cp}/formularios/classificacoesInternas/novo.jsp">Nova Classificação Interna</a>
+            </p>
+            <p>
+                <a href="${cp}/index.jsp">Voltar</a>
+            </p>
+        </div>
   </body>
 
 </html>

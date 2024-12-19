@@ -15,14 +15,45 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .botoes{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 21%;
+              gap: 15%;
+              margin-top: 10%;
+          }
+          
+           .botoes a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #0a661b ;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-    <h1>Midias Cadastradas</h1>
+        .botoes a:hover {
+            background-color: #000; 
+            transform: scale(1.1);
+        }
+        
+        a{
+            color: black;
+        }
+        
+        tbody{
+            margin-left: 5px;
+        }
+      </style>
 
-    <p>
-      <a href="${cp}/formularios/midias/novo.jsp">
-        Nova Mídia
-      </a>
-    </p>
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Midias Cadastradas</h1>
 
     <table class="tabelaListagem">
       <thead>
@@ -53,18 +84,18 @@
 
         <c:forEach items="${servicos.todos}" var="midia">
           <tr>
-            <td>${midia.id}</td>
-            <td>${midia.titulo}</td>
-            <td>${midia.anoLancamento}</td>
-            <td>${midia.codigoBarras}</td>
-            <td>${midia.duracaoEmMinutos}</td>
-            <td>${midia.atorPrincipal.nome} ${midia.atorPrincipal.sobrenome}</td>
-            <td>${midia.atorCoadjuvante.nome} ${midia.atorCoadjuvante.sobrenome}</td>
-            <td>${midia.genero.descricao}</td>
-            <td>${midia.classificacaoEtaria.descricao}</td>
-            <td>${midia.tipo.descricao}</td>
-            <td>${midia.classificacaoInterna.descricao}</td>
-            <td>${midia.classificacaoInterna.valorAluguel}</td>
+            <td style="color: #000">${midia.id}</td>
+            <td style="color: #000">${midia.titulo}</td>
+            <td style="color: #000">${midia.anoLancamento}</td>
+            <td style="color: #000">${midia.codigoBarras}</td>
+            <td style="color: #000">${midia.duracaoEmMinutos}</td>
+            <td style="color: #000">${midia.atorPrincipal.nome} ${midia.atorPrincipal.sobrenome}</td>
+            <td style="color: #000">${midia.atorCoadjuvante.nome} ${midia.atorCoadjuvante.sobrenome}</td>
+            <td style="color: #000">${midia.genero.descricao}</td>
+            <td style="color: #000">${midia.classificacaoEtaria.descricao}</td>
+            <td style="color: #000">${midia.tipo.descricao}</td>
+            <td style="color: #000">${midia.classificacaoInterna.descricao}</td>
+            <td style="color: #000">${midia.classificacaoInterna.valorAluguel}</td>
             
             <td>
               <a href="${cp}/${prefixo}Alteracao&id=${midia.id}">
@@ -81,9 +112,14 @@
       </tbody>
       
     </table>
-
-    <p><a href="${cp}/index.jsp">Tela Principal</a></p>
-
+        <div class="botoes">
+            <p>
+                <a href="${cp}/index.jsp">Voltar</a>
+            </p>
+            <p>
+                <a href="${cp}/formularios/midias/novo.jsp">Nova Mídia</a>
+            </p>
+        </div>
   </body>
 
 </html>

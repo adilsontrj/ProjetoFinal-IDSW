@@ -15,14 +15,45 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .botoes{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 21%;
+              gap: 15%;
+              margin-top: 10%;
+          }
+          
+           .botoes a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #0a661b ;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-    <h1>Exemplares Cadastrados</h1>
+        .botoes a:hover {
+            background-color: #000; 
+            transform: scale(1.1);
+        }
+        
+        a{
+            color: black;
+        }
+        
+        tbody{
+            margin-left: 5px;
+        }
+      </style>
 
-    <p>
-      <a href="${cp}/formularios/exemplares/novo.jsp">
-        Novo Produto
-      </a>
-    </p>
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Exemplares Cadastrados</h1>
 
     <table class="tabelaListagem">
       <thead>
@@ -43,10 +74,10 @@
 
         <c:forEach items="${servicos.todos}" var="exemplar">
           <tr>
-            <td>${exemplar.codigoInterno}</td>
-            <td>${exemplar.disponivel}</td>
-            <td>${exemplar.midia.titulo}</td>
-            <td>
+            <td style="color: #000">${exemplar.codigoInterno}</td>
+            <td style="color: #000">${exemplar.disponivel}</td>
+            <td style="color: #000">${exemplar.midia.titulo}</td>
+            <td style="color: #000">
               <a href="${cp}/${prefixo}Alteracao&id=${exemplar.codigoInterno}">
                 Alterar
               </a>
@@ -61,9 +92,13 @@
       </tbody>
 
     </table>
-
-    <p><a href="${cp}/index.jsp">Tela Principal</a></p>
-
+        <div class="botoes">
+            <p>
+                <a href="${cp}/index.jsp">Voltar</a>
+            </p>
+            <p>
+                <a href="${cp}/formularios/exemplares/novo.jsp">Novo Produto</a>
+            </p>
+        </div>
   </body>
-
 </html>

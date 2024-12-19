@@ -14,8 +14,54 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              color: #000;
+              justify-content:  flex-end;
+          }
 
-    <h1>Novo Cliente</h1>
+          .botao{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;   
+          }
+          
+          input[type="submit"] {
+            background-color: #0a661b;
+            color: white; 
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000; 
+        }
+
+        input[type="submit"]:active {
+            background-color: #000;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+        }
+        
+        .voltar{
+            color: #000;
+            margin-left: 10%
+        } 
+      </style>
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Novo Cliente</h1>
 
     <form method="post" action="${cp}/processaClientes">
 
@@ -23,7 +69,7 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
+          <td class="campos">Nome:</td>
           <td>
             <input name="nome"
                    type="text"
@@ -33,7 +79,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sobrenome:</td>
+          <td class="campos">Sobrenome:</td>
           <td>
             <input name="sobrenome"
                    type="text"
@@ -43,7 +89,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Data de Nascimento:</td>
+          <td class="campos">Data de Nascimento:</td>
           <td>
             <input name="dataNascimento"
                    type="date"
@@ -53,7 +99,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">CPF:</td>
+          <td class="campos">CPF:</td>
           <td>
             <input name="cpf"
                    type="text"
@@ -64,7 +110,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">E-mail:</td>
+          <td class="campos">E-mail:</td>
           <td>
             <input name="email"
                    type="email"
@@ -74,7 +120,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Logradouro:</td>
+          <td class="campos">Logradouro:</td>
           <td>
             <input name="logradouro"
                    type="text"
@@ -84,7 +130,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Número:</td>
+          <td class="campos">Número:</td>
           <td>
             <input name="numero"
                    type="text"
@@ -94,7 +140,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Bairro:</td>
+          <td class="campos">Bairro:</td>
           <td>
             <input name="bairro"
                    type="text"
@@ -104,7 +150,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">CEP:</td>
+          <td class="campos">CEP:</td>
           <td>
             <input name="cep"
                    type="text"
@@ -115,7 +161,7 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Cidade:</td>
+          <td class="campos">Cidade:</td>
           <td>
 
             <jsp:useBean 
@@ -135,11 +181,11 @@
         </tr>
         <tr>
           <td>
-            <a href="${cp}/formularios/clientes/listagem.jsp">
-              Voltar
-            </a>
+              <div class="voltar">
+                <a href="${cp}/formularios/clientes/listagem.jsp"> Voltar</a>
+              </div>
           </td>
-          <td class="alinharDireita">
+          <td class="botao">
             <input type="submit" value="Salvar"/>
           </td>
         </tr>

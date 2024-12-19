@@ -14,8 +14,53 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;  
+          }
+          
+           botaoExcluir{
+              margin-right: 50%;
+          }
+              
+           input[type="submit"] {
+              background-color: #0a661b; 
+              color: white; 
+              border: none; 
+              padding: 15px 32px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 8px;
+              transition: background-color 0.3s ease;
+         }
 
-    <h1>Excluir Tipos</h1>
+            input[type="submit"]:hover {
+                background-color: #f80018; 
+            }
+
+            input[type="submit"]:active {
+                background-color: #f80018;
+            }
+
+            input[type="submit"]:focus {
+                outline: none;
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+            }
+
+              .volta{
+                  margin-right: 50px;
+                  color: black;
+              }
+          
+      </style>
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Excluir Tipos</h1>
 
     <form method="post" action="${cp}/processaTipos">
 
@@ -24,16 +69,18 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Descrição:</td>
-          <td>${requestScope.tipo.descricao}</td>
+          <td class="campos" style="color: #000">Descrição:</td>
+          <td style="color: #000">${requestScope.tipo.descricao}</td>
         </tr>
         <tr>
           <td>
+              <div class="volta">
             <a href="${cp}/formularios/tipos/listagem.jsp">
               Voltar
             </a>
+              </div>
           </td>
-          <td class="alinharDireita">
+          <td class="botaoExcluir">
             <input type="submit" value="Excluir"/>
           </td>
         </tr>

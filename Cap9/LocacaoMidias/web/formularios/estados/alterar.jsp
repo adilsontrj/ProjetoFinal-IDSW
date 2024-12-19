@@ -92,7 +92,7 @@
         </tr>
         <tr>
           <td>
-              <div class="voltar"
+              <div class="voltar">
                 <a href="${cp}/formularios/estados/listagem.jsp">Voltar</a>
               </div>
           </td>

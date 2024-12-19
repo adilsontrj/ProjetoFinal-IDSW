@@ -15,8 +15,53 @@
   </head>
 
   <body>
+      <style>
+          body{
+              background: #e1e1e1;
+          }
+          
+          .campos{
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;  
+          }
+          
+           botaoExcluir{
+              margin-right: 50%;
+          }
+              
+           input[type="submit"] {
+              background-color: #0a661b; 
+              color: white; 
+              border: none; 
+              padding: 15px 32px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 8px;
+              transition: background-color 0.3s ease;
+         }
 
-    <h1>Excluir Ator/Atriz</h1>
+            input[type="submit"]:hover {
+                background-color: #f80018; 
+            }
+
+            input[type="submit"]:active {
+                background-color: #f80018;
+            }
+
+            input[type="submit"]:focus {
+                outline: none;
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+            }
+
+              .volta{
+                  margin-right: 50px;
+                  color: black;
+              }
+          
+      </style>
+
+    <h1 style="text-align: center; font-family: sans-serif; margin: 10px 20px">Excluir Ator/Atriz</h1>
 
     <form method="post" action="${cp}/processaAtores">
 
@@ -25,16 +70,16 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>${requestScope.ator.nome}</td>
+          <td class="campos" style="color: #000">Nome:</td>
+          <td style="color: #000">${requestScope.ator.nome}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sobrenome:</td>
-          <td>${requestScope.ator.sobrenome}</td>
+          <td class="campos" style="color: #000">Sobrenome:</td>
+          <td style="color: #000">${requestScope.ator.sobrenome}</td>
         </tr>
         <tr>
-          <td class="alinharDireita">Data de Estréia</td>
-          <td>
+          <td class="campos" style="color: #000">Data de Estréia</td>
+          <td style="color: #000">
             <fmt:formatDate 
                 pattern="dd/MM/yyyy"
                 value="${requestScope.ator.dataEstreia}"/>
@@ -42,9 +87,11 @@
         </tr>
         <tr>
           <td>
+              <div class="volta">
             <a href="${cp}/formularios/atores/listagem.jsp">Voltar</a>
+              </div>
           </td>
-          <td class="alinharDireita">
+          <td class="botaoExcluir">
             <input type="submit" value="Excluir"/>
           </td>
         </tr>
